@@ -1,0 +1,18 @@
+function changeCooling(temp) {
+  let coolingMode;
+  if (temp < 60) {
+    coolingMode = "LOW";
+  } else if (temp >= 60 && temp < 80) {
+    coolingMode = "MEDIUM";
+  } else if (temp >= 80) {
+    coolingMode = "HIGH";
+  }
+  return coolingMode;
+}
+
+
+You can call this function with the current temperature of the computer as an argument and it will return a string indicating the appropriate cooling mode.
+
+const currentTemp = 70;
+const currentCoolingMode = changeCooling(currentTemp);
+console.log(currentCoolingMode); // "MEDIUM"
